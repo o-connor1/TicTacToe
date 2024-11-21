@@ -8,7 +8,7 @@ namespace TicTacToe.Models.ConcreteClass.BoardPiece
 
         public CirclePiece()
         {
-            type = PieceType.Circle;
+            type = PieceType.O;
         }
     }
 }

@@ -7,7 +7,7 @@ namespace TicTacToe.Models.ConcreteClass.BoardPiece
         public PieceType type { get; set; }
         public CrossPiece()
         {
-            type = PieceType.Cross;
+            type = PieceType.X;
         }
     }
 }

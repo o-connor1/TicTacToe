@@ -7,7 +7,7 @@
 
     public enum PieceType
     {
-        Cross,
-        Circle
+        X,
+        O
     };
 }

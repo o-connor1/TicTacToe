@@ -5,7 +5,7 @@ namespace TicTacToe.Models.ConcreteClass
 {
     public sealed class Board
     {
-        private int size;
+        public int size;
         public List<List<IPiece>> board;
         private IWinCheckStrategy winCheckStrategy;
 
@@ -34,7 +34,7 @@ namespace TicTacToe.Models.ConcreteClass
         {
             //row wise checking
             this.winCheckStrategy = new RowWinCheckStrategy(type);
-            FinalResult rowWiseResult = this.winCheckStrategy.winCheckStrategy();     
+            FinalResult rowWiseResult = this.winCheckStrategy.winCheckStrategy(this.board);     
             if (rowWiseResult == FinalResult.Win)
             {
                 return FinalResult.Win;
@@ -42,7 +42,7 @@ namespace TicTacToe.Models.ConcreteClass
 
             //column wise checking
             this.winCheckStrategy = new ColumnWinCheckStrategy(type);
-            FinalResult columnWiseResult = this.winCheckStrategy.winCheckStrategy();
+            FinalResult columnWiseResult = this.winCheckStrategy.winCheckStrategy(this.board);
             if (columnWiseResult == FinalResult.Win)
             {
                 return FinalResult.Win;
@@ -50,7 +50,7 @@ namespace TicTacToe.Models.ConcreteClass
 
             //cross wise checking
             this.winCheckStrategy = new CrossWinCheckStrategy(type);
-            FinalResult crossWiseResult = this.winCheckStrategy.winCheckStrategy();
+            FinalResult crossWiseResult = this.winCheckStrategy.winCheckStrategy(this.board);
             if (crossWiseResult == FinalResult.Win)
             {
                 return FinalResult.Win;

@@ -60,9 +60,14 @@ namespace TicTacToe.Models.ConcreteClass
                 //Print board
 
                 FinalResult currentResult = this.board.checkFinalResult(currentType);
-                if (currentResult == FinalResult.None)
+                if (currentResult == FinalResult.Tie)
                 {
                     Console.WriteLine("Game Tied!");
+                    break;
+                }
+                else if (currentResult == FinalResult.Win)
+                {
+                    Console.WriteLine($"{playerName} wins!");
                     break;
                 }
                 turn++;

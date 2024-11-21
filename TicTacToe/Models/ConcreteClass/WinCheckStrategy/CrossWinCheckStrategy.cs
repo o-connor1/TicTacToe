@@ -11,7 +11,7 @@ namespace TicTacToe.Models.ConcreteClass.WinCheckStrategy
             this.type = type;
         }
 
-        public FinalResult winCheckStrategy()
+        public FinalResult winCheckStrategy(List<List<IPiece>> board)
         {
             //not implemented yet
             return FinalResult.None;
